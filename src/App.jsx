@@ -10,7 +10,7 @@ import ScrollToTop from './components/ScrollToTop'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Injaz">
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
