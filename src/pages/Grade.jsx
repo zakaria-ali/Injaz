@@ -2,12 +2,11 @@ import { useParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import PageBanner from '../components/PageBanner'
 import AnimatedSection, { AnimatedItem } from '../components/AnimatedSection'
-import l1 from '/11a.jpg'
-import l2 from '/11b.jpg'
-import l3 from '/11c.jpg'
-import l4 from '/11d.jpg'
-import l12 from '/12.mp4'
+import { publicUrl } from '../utils/publicUrl'
 import './Grade.css'
+
+const gradeImages = ['11a.jpg', '11b.jpg', '11c.jpg', '11d.jpg']
+const gradeVideo = '12.mp4'
 
 const gradeData = {
   1: {
@@ -91,10 +90,10 @@ export default function Grade() {
 
     {id === '1' && (
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {[l1, l2, l3, l4].map((img, i) => (
+        {gradeImages.map((name, i) => (
           <motion.img
             key={i}
-            src={img}
+            src={publicUrl(name)}
             alt={`lab-${i}`}
             className="w-full h-48 object-cover rounded-xl shadow"
             whileHover={{ scale: 1.05 }}
@@ -105,11 +104,11 @@ export default function Grade() {
 
     {id === '2' && (
       <div className="w-full aspect-video myVideo">
-        <iframe
-          className="rounded-xl"
-          src={l12}
+        <video
+          className="rounded-xl w-full h-full object-contain"
+          src={publicUrl(gradeVideo)}
+          controls
           title="Educational Video"
-          allowFullScreen
         />
       </div>
     )}

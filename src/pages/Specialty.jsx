@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import PageBanner from '../components/PageBanner'
 import AnimatedSection, { AnimatedItem } from '../components/AnimatedSection'
-import img from '/sp.jpeg'
+import { publicUrl } from '../utils/publicUrl'
 import './Specialty.css'
 export default function Specialty() {
   return (
@@ -37,7 +37,7 @@ export default function Specialty() {
     "علم الحاسوب هو الفن الذي تتحول فيه الأفكار إلى شيفرات، وتتحول الشيفرات إلى عوالم رقمية تصنع المستقبل." 💡💻 
     </h2>
           <motion.img
-            src={img}
+            src={publicUrl('sp.jpeg')}
             alt={`specialty`}
             className="w-full h-48 object-cover rounded-xl shadow"
             whileHover={{ scale: 1.05 }}

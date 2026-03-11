@@ -2,6 +2,7 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import PageBanner from "../components/PageBanner"
 import AnimatedSection, { AnimatedItem } from "../components/AnimatedSection"
+import { publicUrl } from "../utils/publicUrl"
 import { grades, subjects, semesters, getWrittenWorkData } from "../data/writtenWork"
 
 
@@ -42,7 +43,7 @@ function FileCard({ item }) {
       <div className="flex gap-2 mt-3">
 
                 <a
-          href={item.file}
+          href={publicUrl(item.file)}
           download
           className="flex-1 text-center py-1.5 text-sm bg-emerald-600 text-white hover:bg-emerald-700 rounded-lg"
         >

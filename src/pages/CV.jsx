@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import PageBanner from '../components/PageBanner'
 import AnimatedSection, { AnimatedItem } from '../components/AnimatedSection'
+import { publicUrl } from '../utils/publicUrl'
 
 const contact = {
   email: 'zakaria.wildali.7@gmail.com',
@@ -122,7 +123,7 @@ export default function CV() {
               className="flex-shrink-0 w-full max-w-md aspect-[16/10] rounded-xl overflow-hidden bg-emerald-100 border-2 border-emerald-200 relative"
             >
               <img
-                src="/profile.jpg"
+                src={publicUrl('profile.jpg')}
                 alt="م. زكريا ولدعلي"
                 className="w-full h-full profile-photo-img"
                 onError={(e) => {
@@ -137,7 +138,7 @@ export default function CV() {
               <h2 className="text-xl font-bold text-emerald-800 mb-2">م. زكريا ولدعلي</h2>
               <p className="text-emerald-600 mb-4">مهندس أنظمة حاسوب — معلم الحاسوب والشبكات في مدرسة محمود خليل أبو الرب المهنية</p>
               <a
-                href="/CV.pdf"
+                href={publicUrl('CV.pdf')}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 text-white rounded-xl font-medium hover:bg-emerald-700 transition-colors shadow-lg"

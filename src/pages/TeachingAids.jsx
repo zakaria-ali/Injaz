@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import PageBanner from '../components/PageBanner'
 import AnimatedSection, { AnimatedItem } from '../components/AnimatedSection'
+import { publicUrl } from '../utils/publicUrl'
 import { grades, subjects, getLessons } from '../data/teachingAids'
 
 export default function TeachingAids() {
@@ -134,13 +135,14 @@ export default function TeachingAids() {
                     </h3>
 
                     {/* PPT */}
-                    {selectedLesson.aids.ppt && (
+                    {(selectedLesson.aids.ppt || selectedLesson.aids.pptx) && (
                       <div className="p-4 bg-emerald-50 rounded-xl">
                         <h4 className="font-medium mb-2">📊 عرض بوربوينت</h4>
 
                         <a
-                          href={selectedLesson.aids.ppt}
+                          href={publicUrl(selectedLesson.aids.ppt || selectedLesson.aids.pptx)}
                           target="_blank"
+                          rel="noopener noreferrer"
                           className="px-4 py-2 bg-emerald-600 text-white rounded-lg"
                         >
                           عرض / تنزيل
@@ -154,8 +156,9 @@ export default function TeachingAids() {
                         <h4 className="font-medium mb-2">🎬 فيديو</h4>
 
                         <a
-                          href={selectedLesson.aids.video}
+                          href={publicUrl(selectedLesson.aids.video)}
                           target="_blank"
+                          rel="noopener noreferrer"
                           className="px-4 py-2 bg-emerald-600 text-white rounded-lg"
                         >
                           مشاهدة الفيديو
@@ -163,7 +166,7 @@ export default function TeachingAids() {
                       </div>
                     )}
 
-                    {/* WEBSITE */}
+                    {/* WEBSITE (external – no base path) */}
                     {selectedLesson.aids.website && (
                       <div className="p-4 bg-emerald-50 rounded-xl">
                         <h4 className="font-medium mb-2">🌐 موقع</h4>
@@ -171,6 +174,7 @@ export default function TeachingAids() {
                         <a
                           href={selectedLesson.aids.website}
                           target="_blank"
+                          rel="noopener noreferrer"
                           className="px-4 py-2 bg-emerald-600 text-white rounded-lg"
                         >
                           زيارة الموقع
