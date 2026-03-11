@@ -29,7 +29,7 @@ jobs:
         run: npm ci
 
       - name: Build for GitHub Pages
-        run: npx vite build --base /Injaz/
+        run: npm run build
 
       - name: Add .nojekyll for GitHub Pages
         run: touch dist/.nojekyll
