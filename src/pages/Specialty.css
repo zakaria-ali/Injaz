@@ -1,0 +1,10 @@
+.mySection {
+    min-height: 0;
+}
+
+.mySection img {
+    width: 100%;
+    height: auto;
+    max-height: 520px;
+    object-fit: cover;
+}
