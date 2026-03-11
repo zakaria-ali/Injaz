@@ -4,6 +4,19 @@
 
 ---
 
+## النشر التلقائي على GitHub Pages (مفعّل)
+
+تم إعداد **GitHub Actions** بحيث يتم البناء والنشر تلقائياً عند كل `git push` إلى `main`.
+
+**تفعيل الموقع لأول مرة:**
+1. ادخل إلى المستودع على GitHub: **https://github.com/zakaria-ali/Injaz**
+2. **Settings** → **Pages**
+3. تحت **Build and deployment** → **Source** اختر **GitHub Actions**
+4. احفظ. بعد اكتمال العملية (Actions) سيكون الموقع متاحاً على:
+   **https://zakaria-ali.github.io/Injaz/**
+
+---
+
 ## الطريقة 1: Vercel (موصى بها)
 
 1. **إنشاء حساب**: ادخل إلى [vercel.com](https://vercel.com) وسجّل دخولك (يمكن استخدام GitHub).
