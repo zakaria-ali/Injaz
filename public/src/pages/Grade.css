@@ -1,0 +1,21 @@
+iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 320px;
+}
+
+.myVideo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -3rem;
+}
+
+.myMidea {
+    margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    iframe {
+        height: 420px;
+    }
+}
