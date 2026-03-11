@@ -30,3 +30,12 @@ build/
 .env
 .env.local
 .env.*.local
+
+# Duplicate/copy in public (do not deploy)
+public/.git
+public/src
+public/vite.config.js
+public/package.json
+public/package-lock.json
+public/eslint.config.js
+public/README.md
