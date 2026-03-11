@@ -33,6 +33,9 @@ jobs:
         env:
           BASE_PATH: "/Injaz/"
 
+      - name: Add .nojekyll for GitHub Pages
+        run: touch dist/.nojekyll
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
